@@ -1,0 +1,162 @@
+@import url(//db.onlinewebfonts.com/c/6ee4e08e93e4eb76f4bc6e648e6419af?family=SteelworksW01-Book);
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #201c2c;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.Sidebar {
+  display: block;
+  height: 91%;
+  width: 13%;
+  background: linear-gradient(to bottom, #bc9cf4, #7c1cfc);
+  margin-left: 1.75%;
+  margin-top: 3.5%;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList .SidebarRow {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  color: rgba(255, 255, 255, 0.616);
+  justify-content: center;
+  align-items: center;
+  transition: 1ms;
+}
+
+.SidebarList .SidebarRow:Hover{
+  cursor: pointer;
+  color: white;
+  background-color: #201c2ca1;
+}
+
+.SidebarList .active #list {
+  background-color: #160d31e3;
+  color: white;
+}
+
+.SidebarRow #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.SidebarRow #title {
+  flex: 70%; 
+  font-size: 11px;
+}
+
+.SidebarRow #icon img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.SidebarList .logoRow {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  transition: 1ms;
+}
+
+.logoRow #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.logoRow #title {
+  flex: 70%; 
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.logoRow #icon img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.line {
+  margin: 15px auto;
+  border: 0;
+  height: 1px;
+  background-color: white;
+  width: 85%;
+}
+
+.row {
+  text-decoration: none;
+}
+
+.scrolling-text{
+  font-size: 3em;
+  display: flex;
+  position: absolute;
+  top: 1%;
+  font-family: 'SteelworksW01-Book', sans-serif;
+  font-weight: thin;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  color: white;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0%{
+    transform: translateX(40%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (max-width: 1172px){
+  .Sidebar{
+    margin-top: 5.4%;
+  }
+}
+
+@media only screen and (max-width: 678px){
+  .Sidebar{
+    margin-top: 9.6%;
+  }
+}
+
+
+
+

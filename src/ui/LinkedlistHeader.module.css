@@ -1,0 +1,40 @@
+.toolbar {
+    width: 100%;
+    background: linear-gradient(to bottom, #7c1cfc, #a172f3);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.sliderlabel {
+    width: 10%;
+    font-size: 15px;
+}
+
+.slider {
+    width: 55%;
+}
+
+.slidiv {
+    display: flex;
+    gap: 1.1%;
+    align-items: center;
+    width: 65%;
+    position: absolute;
+    left: 47.8%;
+    color: white;
+}
+
+.toolbar p {
+    font-size: 90%;
+}
+
+.select {
+    width: 20%;
+    border-color: white;
+}
+
+.textbox {
+    width: 15%;
+    color: white;
+}

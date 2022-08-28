@@ -1,0 +1,13 @@
+.container {
+    color: white;
+    background-color: #282c3c;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 16.5%;
+    top: 8%;
+    border-radius: 5px;
+    height: 91%;
+}
+

@@ -1,0 +1,253 @@
+.border {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  width: 100%;
+  height: 92%;
+}
+
+.border2{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  height: 71%;
+  width: 90%;
+  bottom: 0;
+  justify-content: center;
+  animation: fadein 0.5s linear;
+}
+
+.box1{
+  width: 50%;
+  height: 100%;
+  position: inherit;
+  left: 0;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.box2{
+  width: 50%;
+  height: 100%;
+  position: inherit;
+  right: 0;
+  padding-left: 5%;
+  text-align: center;
+}
+
+.box1 p{
+  padding-top: 5%;
+  height: 18.5%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+}
+
+.box1 .embed{
+  height: 75%;
+  width: 100%;
+  padding-bottom: 10%;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.box2 p{
+  padding-top: 8%;
+  height: 18.5%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+}
+
+.box2 .slides{
+  height: 75%;
+  width: 100%;
+  padding-bottom: 10%;
+}
+
+/* 
+code taken from
+https://css-tricks.com/snippets/css/typewriter-effect/ 
+*/
+
+a {
+  color: turquoise;
+}
+
+.css-typing p {
+  border-right: 0.15em solid orange;
+  font-family: "Poppins", sans-serif;
+  font-size: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 63%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  -webkit-animation: type2 2.5s steps(50, end);
+  animation: type2 2.5s steps(50, end);
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(4) {
+  width: 89%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(40, end);
+  animation: type3 2s steps(40, end);
+  -webkit-animation-delay: 6.5s;
+  animation-delay: 6.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1172px) {
+  .border {
+    margin-top: 8%;
+  }
+  .css-typing p {
+    font-size: 110%;
+  }
+  .box1 p{
+    font-size: 1rem;
+  }
+  .box2{
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 678px) {
+  .border {
+    margin-top: 13%;
+  }
+  .css-typing p {
+    font-size: 70%;
+  }
+  .box1 p{
+    font-size: .8rem;
+  }
+  .box2 p{
+    font-size: .8rem;
+  }
+}
