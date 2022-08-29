@@ -56,17 +56,17 @@ export default class Sort2 extends Component {
                   height: `${value}px`,
                   width: `${
                     numOfBars > 250
-                      ? 2
+                      ? .135
                       : numOfBars > 200
-                      ? 2.9
+                      ? .21
                       : numOfBars > 150
-                      ? 4.2
+                      ? .285
                       : numOfBars > 100
-                      ? 6.3
+                      ? .425
                       : numOfBars > 50
-                      ? 10.6
-                      : 22.8
-                  }px`,
+                      ? .7
+                      : 1.5
+                  }%`,
                 }}
               ></div>
             ))}
