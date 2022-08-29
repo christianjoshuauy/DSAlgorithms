@@ -19,7 +19,7 @@ function Home() {
             </p>
             <p>
               If you have any suggestions here's the link to the{" "}
-              <a href="https://github.com/tr1b1iwnl/projectAlgo">repository</a>.
+              <a href="https://github.com/tr1b1iwnl/DSAlgorithms">repository</a>.
               Enjoy!
             </p>
           </div>
