@@ -53,7 +53,7 @@ export default class Sort2 extends Component {
                 key={idx}
                 style={{
                   backgroundColor: PRIMARY_COLOR,
-                  height: `${value}px`,
+                  height: `${value}%`,
                   width: `${
                     numOfBars > 250
                       ? .135
@@ -142,7 +142,7 @@ export default class Sort2 extends Component {
   resetArray() {
     const array = [];
     for (let i = 0; i < numOfBars; i++) {
-      array.push(randomIntFromInterval(5, 730));
+      array.push(randomIntFromInterval(2, 80));
     }
     this.setState({ array });
   }
@@ -165,7 +165,7 @@ export default class Sort2 extends Component {
         setTimeout(() => {
           const [barOne, newHeight] = animations[i];
           const barOneStyle = arrayBars[barOne].style;
-          barOneStyle.height = `${newHeight}px`;
+          barOneStyle.height = `${newHeight}%`;
         }, i * animationSpeed);
       }
     }
@@ -197,8 +197,8 @@ export default class Sort2 extends Component {
             arrayBars[barOne].style,
             arrayBars[barTwo].style,
           ];
-          barOneStyle.height = `${newHeight1}px`;
-          barTwoStyle.height = `${newHeight2}px`;
+          barOneStyle.height = `${newHeight1}%`;
+          barTwoStyle.height = `${newHeight2}%`;
         }, i * animationSpeed);
       }
     }
@@ -230,8 +230,8 @@ export default class Sort2 extends Component {
             arrayBars[barOne].style,
             arrayBars[barTwo].style,
           ];
-          barOneStyle.height = `${newHeight1}px`;
-          barTwoStyle.height = `${newHeight2}px`;
+          barOneStyle.height = `${newHeight1}%`;
+          barTwoStyle.height = `${newHeight2}%`;
         }, i * animationSpeed);
       }
     }
@@ -260,7 +260,7 @@ export default class Sort2 extends Component {
           const barOne = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars[barOne].style;
-          barOneStyle.height = `${newHeight}px`;
+          barOneStyle.height = `${newHeight}%`;
         }, i * animationSpeed);
       }
     }
@@ -289,7 +289,7 @@ export default class Sort2 extends Component {
           const barOne = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars[barOne].style;
-          barOneStyle.height = `${newHeight}px`;
+          barOneStyle.height = `${newHeight}%`;
         }, i * animationSpeed);
       }
     }
@@ -318,7 +318,7 @@ export default class Sort2 extends Component {
           const barOne = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars[barOne].style;
-          barOneStyle.height = `${newHeight}px`;
+          barOneStyle.height = `${newHeight}%`;
         }, i * animationSpeed);
       }
     }
@@ -326,5 +326,5 @@ export default class Sort2 extends Component {
 }
 
 function randomIntFromInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.random() * (max - min + 1) + min;
 }
