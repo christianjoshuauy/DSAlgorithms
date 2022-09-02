@@ -108,10 +108,8 @@ export default class Trees extends Component {
       await this.tree.addNodeAnimated(tempVal, context);
       this.drawTreeMain(this.tree.root);
     } else if (type === 2) {
-      let root = await this.tree.deleteNodeAnimated(tempVal, context);
-      this.tree.root = root;
+      this.tree.root = await this.tree.deleteNodeAnimated(tempVal, context);
       this.drawTreeMain(this.tree.root);
-      console.log(this.tree.root);
     } else if (type === 3) {
       if(await this.tree.searchNodeAnimated(tempVal, context)){
         this.handleMessages("Found the node with value: " + tempVal, "success");

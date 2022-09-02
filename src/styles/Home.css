@@ -14,6 +14,7 @@
   width: 90%;
   bottom: 0;
   justify-content: center;
+  pointer-events: none;
   animation: fadein 0.5s linear;
 }
 
@@ -46,6 +47,7 @@
   height: 75%;
   width: 100%;
   padding-bottom: 10%;
+  pointer-events: all;
 }
 
 iframe{
@@ -64,6 +66,7 @@ iframe{
   height: 75%;
   width: 100%;
   padding-bottom: 10%;
+  pointer-events: all;
 }
 
 /* 

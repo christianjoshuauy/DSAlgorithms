@@ -179,7 +179,13 @@ export default class BST {
 
     if(!curr) return this.root;
 
-    if(!curr.left || !curr.right){
+    if(!curr.left && !curr.right){
+      await this.awaitUpdate(arrow, context, curr);
+      if(!prev) this.root = null;
+      else if(prev.left === curr) prev.left = null;
+      else prev.right = null;
+    }
+    else if(!curr.left || !curr.right){
       await this.awaitUpdate(arrow, context, curr);
       let child = curr.left ? curr.left : curr.right;
       await this.awaitUpdate(arrow, context, child);
