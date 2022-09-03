@@ -1,18 +1,32 @@
 .border {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
   margin-top: 5%;
+  padding-bottom: 5%;
   width: 100%;
   height: 92%;
+}
+
+.css-typing{
+  width: 100%;
+  height: 29%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1%;
+}
+
+.wrapper{
+  width: 100%;
 }
 
 .border2{
   display: flex;
   flex-direction: row;
-  position: absolute;
   height: 71%;
   width: 90%;
-  bottom: 0;
   justify-content: center;
   pointer-events: none;
   animation: fadein 0.5s linear;
@@ -30,8 +44,6 @@
 .box2{
   width: 50%;
   height: 100%;
-  position: inherit;
-  right: 0;
   padding-left: 5%;
   text-align: center;
 }
@@ -40,7 +52,7 @@
   padding-top: 5%;
   height: 18.5%;
   font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1vw;
 }
 
 .box1 .embed{
@@ -59,7 +71,7 @@ iframe{
   padding-top: 8%;
   height: 18.5%;
   font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1vw;
 }
 
 .box2 .slides{
@@ -81,24 +93,22 @@ a {
 .css-typing p {
   border-right: 0.15em solid orange;
   font-family: "Poppins", sans-serif;
-  font-size: 120%;
+  font-size: 1vw;
   white-space: nowrap;
   overflow: hidden;
 }
-.css-typing p:nth-child(1) {
-  width: 63%;
-  margin-left: auto;
-  margin-right: auto;
+.css-typing .wrapper:nth-child(1) p {
+  width: 26%;
+  margin: 0 auto;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
-.css-typing p:nth-child(2) {
-  width: 35%;
-  margin-left: auto;
-  margin-right: auto;
+.css-typing .wrapper:nth-child(2) p {
+  width: 15%;
+  margin: 0 auto;
   opacity: 0;
   -webkit-animation: type2 2s steps(40, end);
   animation: type2 2s steps(40, end);
@@ -108,10 +118,9 @@ a {
   animation-fill-mode: forwards;
 }
 
-.css-typing p:nth-child(3) {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.css-typing .wrapper:nth-child(3) p {
+  width: 44%;
+  margin: 0 auto;
   opacity: 0;
   -webkit-animation: type2 2.5s steps(50, end);
   animation: type2 2.5s steps(50, end);
@@ -121,10 +130,9 @@ a {
   animation-fill-mode: forwards;
 }
 
-.css-typing p:nth-child(4) {
-  width: 89%;
-  margin-left: auto;
-  margin-right: auto;
+.css-typing .wrapper:nth-child(4) p {
+  width: 37%;
+  margin: 0 auto;
   opacity: 0;
   -webkit-animation: type3 2s steps(40, end);
   animation: type3 2s steps(40, end);
@@ -227,30 +235,24 @@ a {
 
 @media only screen and (max-width: 1172px) {
   .border {
-    margin-top: 8%;
-  }
-  .css-typing p {
-    font-size: 110%;
+    margin-top: 10%;
   }
   .box1 p{
-    font-size: 1rem;
+    font-size: 1.5vw;
   }
   .box2{
-    font-size: 1rem;
+    font-size: 1.5vw;
   }
 }
 
 @media only screen and (max-width: 678px) {
   .border {
-    margin-top: 13%;
-  }
-  .css-typing p {
-    font-size: 70%;
+    margin-top: 15%;
   }
   .box1 p{
-    font-size: .8rem;
+    font-size: 2vw;
   }
   .box2 p{
-    font-size: .8rem;
+    font-size: 2vw;
   }
 }

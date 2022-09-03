@@ -11,17 +11,27 @@ function Home() {
         <HomeHeader />
         <div className="border">
           <div className="css-typing">
-            <p>Hello World! Welcome to Project Algo Rhythm!</p>
-            <p>by @tr1b1iwnl - Christian</p>
-            <p>
-              This project showcases visualization of the Data Structures and
-              Algorithms.
-            </p>
-            <p>
-              If you have any suggestions here's the link to the{" "}
-              <a href="https://github.com/tr1b1iwnl/DSAlgorithms">repository</a>.
-              Enjoy!
-            </p>
+            <div className="wrapper">
+              <p>Hello World! Welcome to Project Algo Rhythm!</p>
+            </div>
+            <div className="wrapper">
+              <p>by @tr1b1iwnl - Christian</p>
+            </div>
+            <div className="wrapper">
+              <p>
+                This project showcases visualization of the Data Structures and
+                Algorithms.
+              </p>
+            </div>
+            <div className="wrapper">
+              <p>
+                If you have any suggestions here's the link to the{" "}
+                <a href="https://github.com/tr1b1iwnl/DSAlgorithms">
+                  repository
+                </a>
+                . Enjoy!
+              </p>
+            </div>
           </div>
           <div className="border2">
             <div className="box1">
