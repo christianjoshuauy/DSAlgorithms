@@ -13,8 +13,8 @@
 
 @media only screen and (orientation: landscape) and (max-width: 1000px){
     .container{
-        width: 368%;
-        height: 380%;
+        width: 175%;
+        height: 200%;
         left: 30%;
         top: 18%;
     }
