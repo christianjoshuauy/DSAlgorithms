@@ -158,37 +158,6 @@ body {
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 1000px){
-  .Sidebar{
-    margin-top: 142%;
-    height: 380%;
-    width: 26%;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-width: 900px){
-  .Sidebar{
-    margin-top: 146%;
-    height: 380%;
-    width: 26%;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-width: 740px){
-  .Sidebar{
-    margin-top: 154%;
-    height: 380%;
-    width: 26%;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-width: 736px){
-  .Sidebar{
-    margin-top: 178%;
-    height: 380%;
-    width: 26%;
-  }
-}
 
 
 
