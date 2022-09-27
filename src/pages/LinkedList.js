@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Cardcontainer from "../components/Cardcontainer";
+import Cardcontainer, { setCode } from "../components/Cardcontainer";
 import LinkedlistHeader from "../ui/LinkedlistHeader";
 import "../styles/LinkedListAlgo.css";
 import {
@@ -25,6 +25,82 @@ const DEFAULT_LIST = 3;
 const ANIMATION_SPEED = 300;
 const PRIMARY_COLOR = "turquoise";
 const SECONDARY_COLOR = "red";
+const addHeadCode = 
+`bool addHead(int num) {
+  node* new_node = (node*) malloc( sizeof(node) );
+  new_node->element = num;
+  new_node->next = head;
+  head = new_node;
+  if (!tail) {
+      tail = new_node;
+  }
+  size++;
+  return true;
+}`;
+const addAtCode =
+`bool addAt(int num, int pos) {
+  if (pos == 1) {
+      return addHead(num);
+  }
+  if (pos > index) {
+      return addTail(num);
+  }
+  node* current = head;
+  int ctr = 1;
+  while (ctr < pos-1) {
+      current = current->next;
+      ctr++;
+  }
+  node* new_node = (node*) malloc( sizeof(node) );
+  new_node->element = num;
+  new_node->next = current->next;
+  current->next = new_node;
+
+  size++;
+  return true;
+}`;
+const addTailCode =
+`bool addTail(int num) {
+  node* new_node = (node*) malloc( sizeof(node) );
+  new_node->element = num;
+  if (tail) {
+      tail->next = new_node;
+  } 
+  tail = new_node;
+  if (!head) {
+      head = new_node;
+  }
+  index++;
+  return true;
+}`;
+
+const deleteAtCode =
+`bool removeAt(int pos){
+    if(pos > size || pos < 1){
+      return false;
+    }
+    node* curr = head;
+    node* prev = NULL;
+    for(int i = 1; i < pos; i++){
+      prev = curr;
+      curr = curr->next;
+    }
+    prev->next = curr->next;
+    if(curr == tail){
+      tail = prev;
+    }
+    free(curr);
+    return true;
+}`;
+const reverseCode =
+`node* reverseList(node* head) {
+  if(!head || !head->next)
+      return head;
+  node* curr = reverseList(head->next);
+  head->next->next = head;
+  head->next = NULL;
+  return curr;
+}`;
 
 export default class LinkedList extends Component {
   constructor(props) {
@@ -120,14 +196,19 @@ export default class LinkedList extends Component {
 
   listPlay() {
     if (type === 1) {
+      setCode(addHeadCode);
       this.addAtHead(temporaryVal);
     } else if (type === 2) {
+      setCode(addAtCode);
       this.addAtIndex(temporaryVal, temporaryIndex);
     } else if (type === 3) {
+      setCode(addTailCode);
       this.addAtTail(temporaryVal);
     } else if (type === 4) {
+      setCode(deleteAtCode);
       this.deleteAtIndex(temporaryIndex);
     } else if (type === 5) {
+      setCode(reverseCode);
       this.reverseList();
     } else {
       this.handleMessages("Invalid Option", "warning");

@@ -61,9 +61,9 @@ export function getAddAtAnimations(its, val, idx, size){
 
 export function getDeleteAtAnimations(its, idx, size){
     const animations = [];
-    let i = 0;
-    if(idx >= size || idx < 0) return animations;
-    if(idx === '0'){
+    let i = 1;
+    if(idx > size || idx < 1) return animations;
+    if(idx === '1'){
         its.head = its.head.next;
         animations.push([i, 'color']);
         animations.push([i, 'add']);

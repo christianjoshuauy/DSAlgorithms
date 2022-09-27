@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Cardcontainer from "../components/Cardcontainer";
+import Cardcontainer, { setCode } from "../components/Cardcontainer";
 import SortHeader from "../ui/SortHeader";
 import "../styles/SortingAlgo.css";
 import {
@@ -17,6 +17,130 @@ let numOfBars = 200;
 let type = 0;
 const PRIMARY_COLOR = "turquoise";
 const SECONDARY_COLOR = "red";
+const bubbleCode = 
+`void bubbleSort(int *arr, int len){
+  int temp;
+  for(int i=0; i < len; i++){
+    for(int j=0; j < len - i; j++){
+      if(arr[j]>arr[j+1]){
+        temp=arr[j];
+        arr[j]=arr[j+1];
+        arr[j+1]=temp;
+      }
+    }
+  }
+}`;
+const mergeCode = 
+`void mergeSort(int *arr, int start, int end){
+  if(start<end){
+    int mid=(start+end)/2;
+    mergeSort(arr, start, mid);
+    mergeSort(arr, mid+1, end);
+    merge(arr, start, mid, end);
+  }
+}
+
+void merge(int *arr, int start, int mid, int end){
+  int temp[end-start+1];
+  int i=start, j=mid+1, k=0;
+  while(i<=mid&&j<=end){
+    if(arr[i]<=arr[j])
+      temp[k++]=arr[i++];
+    else
+      temp[k++]=arr[j++];
+  }
+  while(i<=mid)
+    temp[k++]=arr[i++];
+  while(j<=end)
+    temp[k++]=arr[j++];
+  for(int l=start; l<=end; l++)
+    arr[l]=temp[l-start];
+}`;
+const selectionCode = 
+`void selectionSort(int *arr, int len){
+  int temp;
+  for(int i=0; i<len; i++){
+    int smallest=i;
+    for(int j=i+1; j<len; j++){
+      if(arr[j]<arr[smallest])
+        smallest=j;
+    }
+    temp=arr[i];
+    arr[i]=arr[smallest];
+    arr[smallest]=temp;
+  }
+}`;
+const insertionCode = 
+`void insertionSort(int *arr, int len){
+  for(int i=1; i<len; i++){
+    int key=arr[i];
+    int j=i-1;
+    while(key<arr[j] && j>=0){
+      arr[j+1]=arr[j];
+      j--;
+    }
+    arr[j+1]=key;
+  }
+}`;
+const quickCode = 
+`void quickSort(int arr[], int start, int end){
+    if (start >= end)
+        return;
+    int p = partition(arr, start, end);
+    quickSort(arr, start, p - 1);
+    quickSort(arr, p + 1, end);
+}
+
+int partition(int arr[], int start, int end)
+{
+    int pivot = arr[start];
+    int count = 0;
+    for (int i = start + 1; i <= end; i++) {
+        if (arr[i] <= pivot)
+            count++;
+    }
+    int pivotIndex = start + count;
+    swap(arr[pivotIndex], arr[start]);
+    int i = start, j = end;
+    while (i < pivotIndex && j > pivotIndex) {
+        while (arr[i] <= pivot) {
+            i++;
+        }
+        while (arr[j] > pivot) {
+            j--;
+        }
+        if (i < pivotIndex && j > pivotIndex) {
+            swap(arr[i++], arr[j--]);
+        }
+    }
+    return pivotIndex;
+}`;
+const heapCode = 
+`void heapSort(int arr[], int n){
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(arr, n, i);
+    for (int i = n - 1; i >= 0; i--) {
+        swap(arr[0], arr[i]);
+        heapify(arr, i, 0);
+    }
+}
+
+void heapify(int arr[], int n, int i)
+{
+    int largest = i; // Initialize largest as root
+    int l = 2 * i + 1; // left
+    int r = 2 * i + 2; // right
+    if (l < n && arr[l] > arr[largest])
+        largest = l;
+    if (r < n && arr[r] > arr[largest])
+        largest = r;
+    if (largest != i) {
+        int temp = arr[i];
+        arr[i] = arr[largest];
+        arr[largest] = temp;
+        heapify(arr, n, largest);
+    }
+}`;
 
 export default class Sort2 extends Component {
   constructor(props) {
@@ -117,21 +241,27 @@ export default class Sort2 extends Component {
 
   sortPlay() {
     if (type === 1) {
+      setCode(bubbleCode);
       this.bubbleSort();
       this.handleMessages("This algorithm's time complexity is O(N^2)", "info");
     } else if (type === 2) {
+      setCode(mergeCode);
       this.mergeSort();
       this.handleMessages("This algorithm's time complexity is O(N log N)", "info");
     } else if (type === 3) {
+      setCode(selectionCode);
       this.selectionSort();
       this.handleMessages("This algorithm's time complexity is O(N^2)", "info");
     } else if (type === 4) {
+      setCode(insertionCode);
       this.insertionSort();
       this.handleMessages("This algorithm's time complexity is O(N^2)", "info");
     } else if (type === 5) {
+      setCode(quickCode);
       this.quickSort();
       this.handleMessages("This algorithm's time complexity is O(N log N)", "info");
     } else if (type === 6) {
+      setCode(heapCode);
       this.heapSort();
       this.handleMessages("This algorithm's time complexity is O(N log N)", "info");
     } else {

@@ -11,7 +11,13 @@
     height: 91%;
 }
 
-@media only screen and (orientation: landscape) and (max-width: 1000px){
+.codeBtn{
+    position: inherit;
+    top: 91%;
+    right: 95%;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1180px){
     .container{
         width: 175%;
         height: 200%;
