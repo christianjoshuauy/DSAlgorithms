@@ -1,5 +1,5 @@
 # DSAlgorithms
-Data Structures and Algorithms Visualizer
+Data Structures and Algorithms Visualizer made with React
 
 * Implemented Sorting Algorithms
   * Bubble Sort
