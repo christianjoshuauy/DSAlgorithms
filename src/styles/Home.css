@@ -4,25 +4,25 @@
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  margin-top: 5%;
-  padding-bottom: 5%;
+  margin-top: 5vw;
+  padding-bottom: 5vw;
   width: 100%;
-  height: 92%;
+  height: 90vh;
 }
 
-.css-typing{
+.css-typing {
   width: 100%;
-  height: 29%;
+  height: 17vh;
   display: flex;
   flex-wrap: wrap;
   margin-top: 1%;
 }
 
-.wrapper{
+.wrapper {
   width: 100%;
 }
 
-.border2{
+.border2 {
   display: flex;
   flex-direction: row;
   height: 71%;
@@ -32,7 +32,7 @@
   animation: fadein 0.5s linear;
 }
 
-.box1{
+.box1 {
   width: 50%;
   height: 100%;
   position: inherit;
@@ -41,42 +41,41 @@
   text-align: center;
 }
 
-.box2{
+.box2 {
   width: 50%;
   height: 100%;
   padding-left: 5%;
   text-align: center;
 }
 
-.box1 p{
+.box1 p {
   padding-top: 5%;
   height: 18.5%;
   font-family: "Poppins", sans-serif;
   font-size: 1vw;
 }
 
-.box1 .embed{
-  height: 75%;
+.box1 .embed {
+  height: 40vh;
   width: 100%;
   padding-bottom: 10%;
   pointer-events: all;
 }
 
-iframe{
+iframe {
   width: 100%;
   height: 100%;
 }
 
-.box2 p{
+.box2 p {
   padding-top: 8%;
   height: 18.5%;
   font-family: "Poppins", sans-serif;
   font-size: 1vw;
 }
 
-.box2 .slides{
-  height: 75%;
-  width: 100%;
+.box2 .slides {
+  width: 30vw;
   padding-bottom: 10%;
   pointer-events: all;
 }
@@ -98,7 +97,7 @@ a {
   overflow: hidden;
 }
 .css-typing .wrapper:nth-child(1) p {
-  width: 26%;
+  width: 21vw;
   margin: 0 auto;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
@@ -107,7 +106,7 @@ a {
 }
 
 .css-typing .wrapper:nth-child(2) p {
-  width: 15%;
+  width: 6vw;
   margin: 0 auto;
   opacity: 0;
   -webkit-animation: type2 2s steps(40, end);
@@ -119,7 +118,7 @@ a {
 }
 
 .css-typing .wrapper:nth-child(3) p {
-  width: 44%;
+  width: 34vw;
   margin: 0 auto;
   opacity: 0;
   -webkit-animation: type2 2.5s steps(50, end);
@@ -131,7 +130,7 @@ a {
 }
 
 .css-typing .wrapper:nth-child(4) p {
-  width: 37%;
+  width: 30vw;
   margin: 0 auto;
   opacity: 0;
   -webkit-animation: type3 2s steps(40, end);
@@ -142,12 +141,12 @@ a {
   animation-fill-mode: forwards;
 }
 
-@keyframes fadein{
-  0%{
+@keyframes fadein {
+  0% {
     opacity: 0;
     transform: translateY(100%);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -237,10 +236,10 @@ a {
   .border {
     margin-top: 10%;
   }
-  .box1 p{
+  .box1 p {
     font-size: 1.5vw;
   }
-  .box2{
+  .box2 {
     font-size: 1.5vw;
   }
 }
@@ -249,10 +248,10 @@ a {
   .border {
     margin-top: 15%;
   }
-  .box1 p{
+  .box1 p {
     font-size: 2vw;
   }
-  .box2 p{
+  .box2 p {
     font-size: 2vw;
   }
 }

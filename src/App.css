@@ -1,7 +1,9 @@
 @import url(//db.onlinewebfonts.com/c/6ee4e08e93e4eb76f4bc6e648e6419af?family=SteelworksW01-Book);
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
 
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 
@@ -17,17 +19,17 @@ body {
   margin: 0;
   padding: 0;
   background-color: #201c2c;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow: hidden;
 }
 
 .Sidebar {
   display: block;
-  height: 91%;
-  width: 13%;
+  height: 91vh;
+  width: 13vw;
   background: linear-gradient(to bottom, #bc9cf4, #7c1cfc);
-  margin-left: 1.75%;
-  margin-top: 3.5%;
+  margin-left: 1.75vw;
+  margin-top: 3.5vw;
   border-radius: 5px;
   position: absolute;
 }
@@ -35,11 +37,9 @@ body {
 .SidebarList {
   height: auto;
   padding: 0;
-  width: 100%;
 }
 
 .SidebarList .SidebarRow {
-  width: 100%;
   height: 60px;
   list-style-type: none;
   margin: 0;
@@ -51,7 +51,7 @@ body {
   transition: 1ms;
 }
 
-.SidebarList .SidebarRow:Hover{
+.SidebarList .SidebarRow:hover {
   cursor: pointer;
   color: white;
   background-color: #201c2ca1;
@@ -69,7 +69,7 @@ body {
 }
 
 .SidebarRow #title {
-  flex: 70%; 
+  flex: 70%;
   font-size: 11px;
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 .logoRow #title {
-  flex: 70%; 
+  flex: 70%;
   font-size: 13px;
   font-weight: 700;
 }
@@ -123,12 +123,12 @@ body {
   text-decoration: none;
 }
 
-.scrolling-text{
+.scrolling-text {
   font-size: 3em;
   display: flex;
   position: absolute;
   top: 1%;
-  font-family: 'SteelworksW01-Book', 'Roboto', sans-serif;
+  font-family: "SteelworksW01-Book", "Roboto", sans-serif;
   font-weight: thin;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -138,73 +138,70 @@ body {
 }
 
 @keyframes scroll {
-  0%{
+  0% {
     transform: translateX(40%);
   }
-  100%{
+  100% {
     transform: translateX(-100%);
   }
 }
 
-@media only screen and (max-width: 1172px){
-  .Sidebar{
+@media only screen and (max-width: 1172px) {
+  .Sidebar {
     margin-top: 5.4%;
   }
 }
 
-@media only screen and (max-width: 678px){
-  .Sidebar{
+@media only screen and (max-width: 678px) {
+  .Sidebar {
     margin-top: 9.6%;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 1180px){
-  .Sidebar{
+@media only screen and (orientation: landscape) and (max-width: 1180px) {
+  .Sidebar {
     top: 13%;
     height: 200%;
     width: 26%;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 1000px){
-  .Sidebar{
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+  .Sidebar {
     top: 6%;
     height: 200%;
     width: 26%;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 900px){
-  .Sidebar{
+@media only screen and (orientation: landscape) and (max-width: 900px) {
+  .Sidebar {
     top: 7%;
     height: 200%;
     width: 26%;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 740px){
-  .Sidebar{
+@media only screen and (orientation: landscape) and (max-width: 740px) {
+  .Sidebar {
     top: 7%;
     height: 200%;
     width: 26%;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 736px){
-  .Sidebar{
+@media only screen and (orientation: landscape) and (max-width: 736px) {
+  .Sidebar {
     top: 9%;
     height: 200%;
     width: 26%;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 667px){
-  .Sidebar{
+@media only screen and (orientation: landscape) and (max-width: 667px) {
+  .Sidebar {
     top: 1%;
     height: 200%;
     width: 26%;
   }
 }
-
-
-

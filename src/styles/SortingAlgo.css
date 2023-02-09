@@ -1,21 +1,21 @@
 .array-container {
-    margin-top: 9%;
-    margin-left: 10%;
-    width: 100%;
-    height: 100%;
-  }
-  
+  margin-top: 9%;
+  margin-left: 7vw;
+  width: 100%;
+  height: 100%;
+}
+
 .array-bar {
   width: 2px;
   display: inline-block;
   margin: 0 1px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  animation: spread .5s linear;
+  animation: spread 0.5s linear;
 }
 
-@keyframes spread{
-  0%{
+@keyframes spread {
+  0% {
     opacity: 0;
     margin-left: -10px;
   }

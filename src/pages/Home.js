@@ -15,7 +15,7 @@ function Home() {
               <p>Hello World! Welcome to Project Algo Rhythm!</p>
             </div>
             <div className="wrapper">
-              <p>by @tr1b1iwnl - Christian</p>
+              <p>by Christian</p>
             </div>
             <div className="wrapper">
               <p>
@@ -26,7 +26,7 @@ function Home() {
             <div className="wrapper">
               <p>
                 If you have any suggestions here's the link to the{" "}
-                <a href="https://github.com/tr1b1iwnl/DSAlgorithms">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                   repository
                 </a>
                 . Enjoy!
